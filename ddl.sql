@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS foodchain (
 	preditor_species VARCHAR(40),
 	CONSTRAINT FK_Preditor FOREIGN KEY (preditor_genus,preditor_species) REFERENCES organism(genus,species),
 	CONSTRAINT FK_Prey FOREIGN KEY (prey_genus, prey_species) REFERENCES organism(genus,species)
+	CONSTRAINT PK_Foodchain PRIMARY KEY (prey_genus,prey_species, preditor_genus, preditor_species)
 );
 
 
