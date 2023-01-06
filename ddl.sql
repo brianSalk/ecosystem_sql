@@ -8,9 +8,6 @@ CREATE TABLE IF NOT EXISTS organism (
 	CONSTRAINT PK_Species PRIMARY KEY (genus, species)
 );
 
--- How do I set this up?  
--- should I enforce that a spieces exists in the organisms table
--- should I create some kind of primary key?
 CREATE TABLE IF NOT EXISTS foodchain (
 	prey_genus VARCHAR(40),
 	prey_species VARCHAR(40),
